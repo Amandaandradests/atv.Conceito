@@ -15,8 +15,8 @@ const anoNasc = Number(prompt(`Informe seu ano de nascimento`));
 const ingresso = Number(prompt(`Qual o ano de ingresso na empresa?`));
 
 //PROCESSAMENTO
-const idade = 2024 - anoNasc;
-const tempoEmpresa = 2024 - ingresso;
+let idade = 2024 - anoNasc;
+let  tempoEmpresa = 2024 - ingresso;
 //SAÍDA
 if (idade >= 65) {
     alert(`Requerer aposentadoria`)
