@@ -1,3 +1,15 @@
 <script>
-    
+     //ENTRADA
+     let valNum1 = Number(prompt('Informe um número inteiro'));
+     let valNum2 = Number(prompt('Informe um número inteiro'));
+
+     //PROCESSAMENTO
+     if (valNum1 == valNum2) {
+        alert("A troca não necessita ser feita!")
+     } else {
+         mudança = valNum1;
+         valNum1 = valNum2;
+         valNum2 = mudança
+         alert(`A mudança foi feita. Antes ${mudança}, ${valNum1}. Depois: ${valNum1}, ${mudança}`)
+     }
 </script>
