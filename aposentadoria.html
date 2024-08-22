@@ -10,14 +10,17 @@ ano de seu nascimento e o ano de seu ingresso na empresa. O programa deverá esc
 tempo de trabalho do empregado e a mensagem 'Requerer aposentadoria' ou 'Não requerer'.*/
 
 //ENTRADA
+
 const codigo = Number(prompt(`Qual o seu número/código?`));
 const anoNasc = Number(prompt(`Informe seu ano de nascimento`));
 const ingresso = Number(prompt(`Qual o ano de ingresso na empresa?`));
 
 //PROCESSAMENTO
+
 let idade = 2024 - anoNasc;
 let  tempoEmpresa = 2024 - ingresso;
 //SAÍDA
+
 if (idade >= 65) {
     alert(`Código ${codigo}:Requerer aposentadoria`)
 } else if (tempoEmpresa >= 30){         
