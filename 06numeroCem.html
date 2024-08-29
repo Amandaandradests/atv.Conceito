@@ -14,20 +14,42 @@
     const numero = Number(prompt(`Informe um número inteiro e menor que 1000:`));
 
     //PROCESSAMENTO
-    const centenas = Math.floor(numero / 100); //02
-    const dezenas = Math.floor((numero - (centenas)) / 10);
-    const unidades = Math.floor(numero - (centenas) - (dezenas));
-    
+    let centenas = Math.floor(numero / 100); //02
+    let dezenas = Math.floor((numero - (centenas * 100)) / 10);
+    let unidades = Math.floor(numero - (centenas * 100) - (dezenas * 10));
+    console.log(unidades);
+    let pluralCentenas;
+    let pluralDezenas;
+    let pluralUnidades;
 
-    //SAÍDA
-    if (centenas >= 1) {
-        alert(`${centenas} centena(s)`)
-    }else if(dezenas >= 1) {
-        alert(`${dezenas} dezenas(s)`)
-    }else if(unidades >= 1) {
-        alert(`${unidades} unidade(s)`)
+    
+    if (centenas > 1) {
+        pluralCentenas = "centenas"
+    } else if (centenas <= 1) { //verificar singular ou plural
+        pluralCentenas = "centena"
     }
 
+    if (dezenas > 1) {
+       pluralDezenas = "dezenas"
+    } else if (dezenas <= 1) {
+        pluralDezenas = "dezena"
+    }
 
+    if (unidades > 1) {
+       pluralUnidades = "unidades"
+    } else if (unidades <= 1) {
+       pluralUnidades = "unidade"
+    }
 
+    //SAÍDA
+    
+    if (numero > 1000) {
+        alert(`Valor Inválido!`)
+    } else if (numero >= 100) {
+        alert(`${numero} = ${centenas} ${pluralCentenas}, ${dezenas} ${pluralDezenas} e ${unidades} ${pluralUnidades}`)
+    } else if (numero > 10) {
+        alert(`${numero} = ${dezenas} ${pluralDezenas} e ${unidades} ${pluralUnidades}`)
+    } else if (numero > 1) {
+        alert(`${numero} = ${unidades} ${pluralUnidades}`)
+    } 
 </script>
