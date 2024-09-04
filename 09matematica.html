@@ -22,22 +22,25 @@
     //PROCESSAMENTO
     if (operação == "multiplicação" || operação == "x") {
         conta = num1 * num2
+        fraseResultado = `A multiplicação dos números é ${conta}`
 
     } else if (operação == "adição" || operação == "+" ){
         conta = num1 + num2
-      
+       fraseResultado = `A soma dos números é ${conta}`
+
     } else if (operação == "subtração" || operação == "-"){
         conta = num1 - num2
-       
+        fraseResultado = `A subtração dos números é ${conta}`
+
     } else if (operação == "divisão" || operação == "/"){
-        conta = num1 / num2
-        
+        conta = (num1 / num2).toFixed(2);
+         fraseResultado = `A divisão dos números é ${conta}`
     } 
     
     if (conta >= 0 ) {
         positivo = 1; //true
     } else 
-        positivo = 0; { //false
+        positivo < 0; { //false
     }
 
     if (conta % 2 == 0) {
