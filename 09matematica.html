@@ -12,11 +12,7 @@
     const num2 = Number(prompt(`Informe um número`));
     const operação = prompt(`Qual operação você deseja realizar?`)
     let conta;
-    let par;
-    let impar;
-    let positivo;
-    let negativo;
-    let inteiro;
+   
     
 
     //PROCESSAMENTO
@@ -37,18 +33,36 @@
          fraseResultado = `A divisão dos números é ${conta}`
     } 
     
-    if (conta >= 0 ) {
-        positivo = 1; //true
-    } else 
-        positivo < 0; { //false
+   
+    if (conta % 2 == 0) {
+
+        fraseParImpar = " o número é par ,";
+
+    } else {                                            
+         fraseParImpar = " o número é ímpar ,";
     }
 
-    if (conta % 2 == 0) {
-        par = 1
-    } else {
-        par = 0
-    }
+    if (Math.sign (conta) == 1) {
         
+        frasePosNeg = " o número é positivo";
+
+    } else {
+
+        frasePosNeg = " o número é negativo";
+    }
+    
+
+    if (Number.isInteger (conta) == true) {
+
+        fraseInteiro = " o seu número é inteiro";
+
+    } else {
+         fraseInteiro = " o seu número é decimal";
+    }
+
     //SAÍDA
-   alert(`Resultado: ${conta}`)
+
+
+  document.write(`O seu número é : ${conta}  Características do resultado: ${fraseParImpar}  ${frasePosNeg} e ${fraseInteiro}`)
+
 </script>
