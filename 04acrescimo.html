@@ -6,10 +6,18 @@
     */
 
     //ENTRADA
-
+    const nota = Number(prompt(`Informe a nota do little brother antes de receber ajuda`));
+    const posAjuda = Number(prompt(`Informe a nota do little brother depois de receber ajuda`));
+    let conta;
     
     //PROCESSAMENTO
-    
+    if (posAjuda > nota) {
+        const diferença = posAjuda - nota;
+        conta = diferença * 0.25;
+        alert(`O big brother receberá um acréscimo em suas notas de ${conta}`);
+    } else {
+        alert(`O big brother não receberá acréscimo pois a nota do litle brother não aumentou!`);
+    }
     
     //SAÍDA
 
