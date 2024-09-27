@@ -11,11 +11,35 @@
     */
 
     //ENTRADA
+    const perg1 = prompt(`Telefonou para a vítima?`);
+    const perg2 = prompt(`Esteve no local do crime?`);
+    const perg3 = prompt(`Mora perto da vítima?`);
+    const perg4 = prompt(`Devia para a vítima?`);
+    const perg5 = prompt(`Já trabalhou com a vítima?`);
+
+    let respostasPositivas = 0
+
+    if (perg1.toLowerCase() === 'sim') respostasPositivas++;
+    if (perg2.toLowerCase() === 'sim') respostasPositivas++;
+    if (perg3.toLowerCase() === 'sim') respostasPositivas++;
+    if (perg4.toLowerCase() === 'sim') respostasPositivas++;
+    if (perg5.toLowerCase() === 'sim') respostasPositivas++;
+
+    let classificacao;
+
+    if (respostasPositivas == 2) {
+        classificacao = "suspeita"
+    } else if (respostasPositivas == 3 || respostasPositivas == 4){
+        classificacao = "Cúmplice"
+    } else if (respostasPositivas == 5){
+        classificacao = "Assasino"
+    } else{
+        classificacao = "inocente"
+    }
 
 
-    //PROCESSAMENTO
-
-    
     //SAÍDA
     
+    alert(`Considerado(a) ${classificacao}`);
+
 </script>
