@@ -10,10 +10,24 @@
     */
 
     //ENTRADA
-    const peso = Number(prompt(``));
+    const peso = Number(prompt(`Informe o seu peso em kg`));
+    const altura = Number(prompt(`Informe a sua altura em metros ex: (1.50)`));
     
+    const imc =  peso / (altura ** 2);
+
     //PROCESSAMENTO
 
+    if (imc <= 18.5) {
+        alert(`Subpeso`);
+    } else if (imc <= 25) {
+        alert(`Normal`);
+    } else if (imc <= 30){
+        alert(`Sobrepeso`);
+    } else if ( imc > 30){
+        alert(`Obeso`);
+    } else {
+        alert(`Peso Inaválido!`);
+    }
     
     //SAÍDA
 
